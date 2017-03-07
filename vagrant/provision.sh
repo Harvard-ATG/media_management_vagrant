@@ -59,8 +59,8 @@ done
 
 # uwsgi
 sudo cp -fv /opt/provision/upstart/uwsgi.conf /etc/init/uwsgi.conf
-sudo service uwsgi stop
+sudo service uwsgi start
 
 # nginx
 sudo ln -sfv /opt/provision/nginx/media_management_api.conf /etc/nginx/sites-enabled/media_management_api
-sudo service nginx stop
+sudo service nginx start

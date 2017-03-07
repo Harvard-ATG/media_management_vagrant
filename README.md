@@ -2,13 +2,18 @@
 
 ## Quickstart
 
-Provision vagrant box:
+Add symlinks to directory containing the media management API and LTI git repositories:
+
+```
+$ ln -s ../media_management_apps apps
+```
+
+Start and provision vagrant box:
 
 ```
 $ vagrant up 
 $ vagrant ssh
 ```
-
 
 Setup API:
 
