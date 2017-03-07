@@ -38,9 +38,7 @@ $ ./manage.py runserver 0.0.0.0:8080
 
 _Note:_ by default the server is provisioned to run NGINX + UWSGI for the API.
 When developing the LTI tool, it is expected that `manage.py runserver` will be
-used since static files will be continuously rebuilt, and it's easier to use
-the built-in static files views rather than continuously monitoring and
-collecting static files for NGINX.
+used since static files will ned to be rebuilt constantly. 
 
 ## URLS
 
