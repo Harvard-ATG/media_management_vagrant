@@ -32,6 +32,7 @@ $ npm install && bower install
 $ export PATH=`pwd`/node_modules/.bin:$PATH
 $ gulp build
 $ cd ..
+$ ./manage.py migrate
 $ ./manage.py runserver 0.0.0.0:8080
 ```
 
