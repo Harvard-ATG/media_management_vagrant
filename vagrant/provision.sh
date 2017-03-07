@@ -51,16 +51,19 @@ done
 # Setup requirements
 for project in ${PROJECTS[@]}
 do
-	mkdir -pv /opt/virtualenvs/$project
-	virtualenv /opt/virtualenvs/$project
+	if [ ! -e /opt/virtualenvs/$project ]; then
+		mkdir -pv /opt/virtualenvs/$project
+		virtualenv /opt/virtualenvs/$project
+	fi
 	. /opt/virtualenvs/$project/bin/activate
 	pip install -r /srv/$project/$project/requirements/local.txt
 done
 
 # uwsgi
 sudo cp -fv /opt/provision/upstart/uwsgi.conf /etc/init/uwsgi.conf
-sudo service uwsgi start
+sudo service uwsgi restart
 
 # nginx
+sudo find /etc/nginx/sites-enabled/ -not -type d -not -name default -exec rm -vf {} \;
 sudo ln -sfv /opt/provision/nginx/media_management_api.conf /etc/nginx/sites-enabled/media_management_api
-sudo service nginx start
+sudo service nginx restart
