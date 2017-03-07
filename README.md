@@ -19,7 +19,8 @@ Setup API:
 
 ```
 $ export DJANGO_SETTINGS_MODULE=media_management_api.settings.local
-$ workon --cd media_management_api
+$ workon media_management_api
+$ cd /srv/media_management_api
 $ ./manage.py migrate
 $ ./manage.py collectstatic
 ```
@@ -28,12 +29,12 @@ Setup LTI:
 
 ```
 $ export DJANGO_SETTINGS_MODULE=media_management_lti.settings.local
-$ workon --cd media_management_lti
-$ cd app 
+$ workon media_management_lti
+$ cd /srv/media_management_lti/app
 $ npm install && bower install
 $ export PATH=`pwd`/node_modules/.bin:$PATH
 $ gulp build
-$ cd ..
+$ cd /srv/media_management_lti
 $ ./manage.py migrate
 $ ./manage.py runserver 0.0.0.0:8080
 ```
@@ -45,8 +46,8 @@ used since static files will ned to be rebuilt constantly.
 ## Useful Aliases
 
 ```sh
-alias workon_api='export DJANGO_SETTINGS_MODULE=media_management_api.settings.local && workon --cd media_management_api'
-alias workon_lti='export DJANGO_SETTINGS_MODULE=media_management_lti.settings.local && workon --cd media_management_lti'
+alias workon_api='export DJANGO_SETTINGS_MODULE=media_management_api.settings.local && workon media_management_api && cd /srv/media_management_api'
+alias workon_lti='export DJANGO_SETTINGS_MODULE=media_management_lti.settings.local && workon media_management_lti && cd /srv/media_management_lti'
 ```
 
 This allows you to type `workon_lti` or `workon_api` which will change
