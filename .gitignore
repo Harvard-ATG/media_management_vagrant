@@ -1,2 +1,3 @@
 /.vagrant
-/apps
+!/apps/README.md
+/apps/*
