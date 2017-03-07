@@ -18,6 +18,7 @@ $ vagrant ssh
 Setup API:
 
 ```
+$ export DJANGO_SETTINGS_MODULE=media_management_api.settings.local
 $ workon --cd media_management_api
 $ ./manage.py migrate
 $ ./manage.py collectstatic
@@ -26,6 +27,7 @@ $ ./manage.py collectstatic
 Setup LTI:
 
 ```
+$ export DJANGO_SETTINGS_MODULE=media_management_lti.settings.local
 $ workon --cd media_management_lti
 $ cd app 
 $ npm install && bower install
@@ -39,6 +41,18 @@ $ ./manage.py runserver 0.0.0.0:8080
 _Note:_ by default the server is provisioned to run NGINX + UWSGI for the API.
 When developing the LTI tool, it is expected that `manage.py runserver` will be
 used since static files will ned to be rebuilt constantly. 
+
+## Useful Aliases
+
+```sh
+alias workon_api='export DJANGO_SETTINGS_MODULE=media_management_api.settings.local && workon --cd media_management_api'
+alias workon_lti='export DJANGO_SETTINGS_MODULE=media_management_lti.settings.local && workon --cd media_management_lti'
+```
+
+This allows you to type `workon_lti` or `workon_api` which will change
+directory to the API/LTI tool and set the appropriate virtualenv and DJANGO
+settings module.
+
 
 ## URLS
 
