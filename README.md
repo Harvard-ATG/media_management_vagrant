@@ -12,6 +12,7 @@ Start and provision vagrant box:
 
 ```
 $ vagrant up 
+$ vagrant provision
 $ vagrant ssh
 ```
 
