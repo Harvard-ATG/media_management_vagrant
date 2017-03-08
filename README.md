@@ -9,7 +9,7 @@ This is a virtual DEV environment for the following projects:
 ## Assumptions
 
 - Must have [vagrant](https://www.vagrantup.com/) and [virtualbox](https://www.virtualbox.org/) installed.
-- Must have downloaded the git repositories for both projects. Put both projects in the same folder so that the following folder structure is possible:
+- Must have cloned the git repositories for both projects. Put both projects in the same folder so that the following folder structure is possible:
 ```
     media_management_apps/
             media_management_api/
