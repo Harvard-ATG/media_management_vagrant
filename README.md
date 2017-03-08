@@ -3,7 +3,7 @@
 This is a virtual DEV environment for the following projects:
 
 - [media_management_api](https://github.com/Harvard-ATG/media_management_api)
-- [media_management_lti](https://github.com/Harvard-ATG/media_management_lti).
+- [media_management_lti](https://github.com/Harvard-ATG/media_management_lti)
 
 
 ## Assumptions
