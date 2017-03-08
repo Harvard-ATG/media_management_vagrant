@@ -23,10 +23,11 @@ This is a virtual DEV environment for the following projects:
 
 ## Quickstart
 
-
-Add symlinks to directory containing the media management API and LTI git repositories:
+Clone the repository and setup symlinks to the folder containing the projects (git repositories):
 
 ```
+$ git clone git@github.com:Harvard-ATG/media_management_vagrant.git
+$ cd media_management_vagrant
 $ ln -s ../media_management_apps apps
 ```
 
